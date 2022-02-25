@@ -10,7 +10,11 @@ import org.springframework.web.client.RestTemplate;
 public class ExampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExampleApplication.class, args);
+		try {
+			SpringApplication.run(ExampleApplication.class, args);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 	}
 
 	@Bean
